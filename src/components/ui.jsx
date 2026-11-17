@@ -90,7 +90,7 @@ export const Footer = ({ links }) => (
         <p><a className="transition-colors duration-[180ms] hover:text-[#8DB8EA]" href={`tel:${BUSINESS.phone.replace(/\s/g, "")}`}>{BUSINESS.phone}</a></p>
       </div>
     </div>
-    <p className="border-t border-white/10 py-5 text-center text-xs text-ivory/45">© 2026 Manyaleza Suppliers · Website by B34ST Web Services</p>
+    <p className="border-t border-white/10 py-5 text-center text-xs text-ivory/45">© 2026 Manyaleza Suppliers · Powered by B34ST Web Services</p>
   </footer>
 );
 
