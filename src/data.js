@@ -17,7 +17,7 @@ export const stock = (kw, n, w = 800, h = 600) => {
     "earbuds,wireless": localAsset("pods.jpg"),
     "stationery,notebook": localAsset("calculator.jpg"),
     "work,boots": localAsset("safetyboots.jpg"),
-    "workwear,overalls": localAsset("safetyboots.jpg"),
+    "workwear,overalls": localAsset("worksuit.jpeg"),
     "cotton,clothes": localAsset("boxers.jpg"),
     backpack: localAsset("bagpack.jpg"),
     "laptop,bag": localAsset("laptopbag.jpg"),
@@ -31,9 +31,9 @@ export const LAPTOP_IMG = localAsset("calculator.jpg");
 export const IMG = {
   hero: localAsset("hero_car.jpeg"),
   autoDivision: localAsset("front_view_car.jpeg"),
-  suppliesDivision: localAsset("calculator.jpg"),
+  suppliesDivision: localAsset("pods.jpg"),
   autoHero: localAsset("better_plate_car.jpg"),
-  about: localAsset("inner_car.jpeg"),
+  about: localAsset("car_deal.png"),
 };
 
 export const BUSINESS = {
@@ -53,7 +53,7 @@ export const services = [
   { id: "sales", image: localAsset("front_view_car.jpeg"), title: "Vehicle Sales", text: "Vehicles available through our dealership services. Ask us about what is currently on offer." },
   { id: "sourcing", image: localAsset("hero_car.jpeg"), title: "Vehicle Sourcing and Ordering", text: "Tell us the vehicle you need and we discuss sourcing and ordering it on your behalf." },
   { id: "transit", image: localAsset("plate_car.jpg"), title: "Transit from Dar es Salaam", text: "Transportation of vehicles from Dar es Salaam, Tanzania, to destinations across Zambia." },
-  { id: "clearing", image: localAsset("better_plate_car.jpg"), title: "Clearing at Dar Port and Nakonde", text: "Clearing arrangements at Dar es Salaam Port and Nakonde through our stated agent network." },
+  { id: "clearing", image: localAsset("portview.png"), title: "Clearing at Dar Port and Nakonde", text: "Clearing arrangements at Dar es Salaam Port and Nakonde through our stated agent network." },
   { id: "delivery", image: localAsset("front_view_car.jpeg"), title: "Vehicle Delivery", text: "Delivery of your vehicle to you, arranged and agreed with you directly." },
 ];
 
