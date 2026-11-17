@@ -89,7 +89,7 @@ export const products = [
   { id: 3, name: "AirPods", cat: "electronics", desc: "Wireless earbuds. Ask about available options.", image: localAsset("pods.jpg") },
   { id: 4, name: "Stationery", cat: "stationery", desc: "Office and school stationery supplies, including bulk orders.", image: localAsset("calculator.jpg") },
   { id: 5, name: "Safety Boots", cat: "safety", desc: "Safety boots for work sites and industrial use.", image: localAsset("safetyboots.jpg"), featured: true },
-  { id: 6, name: "Work Suits", cat: "safety", desc: "Work suits and workwear for businesses and individuals.", image: localAsset("safetyboots.jpg") },
+  { id: 6, name: "Work Suits", cat: "safety", desc: "Work suits and workwear for businesses and individuals.", image: localAsset("worksuit.jpeg") },
   { id: 7, name: "Boxers", cat: "clothing", desc: "Men's boxers. Ask about available sizes.", image: localAsset("boxers.jpg") },
   { id: 8, name: "Backpacks", cat: "bags", desc: "Backpacks for school, work and travel.", image: localAsset("bagpack.jpg"), featured: true },
   { id: 9, name: "Laptop Bags", cat: "bags", desc: "Laptop bags for carrying and protecting your device.", image: localAsset("laptopbag.jpg") },
