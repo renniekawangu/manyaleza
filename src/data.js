@@ -46,10 +46,21 @@ export const BUSINESS = {
 
 export const waLink = (text) => `https://wa.me/${BUSINESS.wa}?text=${encodeURIComponent(text)}`;
 export const productUrl = (p) => {
-  if (typeof window === "undefined") return `#/supplies?product=${encodeURIComponent(p.id)}`;
-  return `${window.location.origin}${window.location.pathname}${window.location.search}#/supplies?product=${encodeURIComponent(p.id)}`;
+  if (!p.image) return "";
+  if (typeof window === "undefined") return p.image;
+  return new URL(p.image, window.location.origin).toString();
 };
-export const productEnquiry = (p) => waLink(`Hello Manyaleza Suppliers, I would like to enquire about ${p.name}. Please share the current price and availability. Product link: ${productUrl(p)}`);
+export const productEnquiry = (p) => {
+  const link = productUrl(p);
+  const message = [
+    "Hello Manyaleza Suppliers,",
+    "",
+    `I would like to enquire about ${p.name}.`,
+    "Please share the current price and availability.",
+    ...(link ? ["", `Product link: ${link}`] : [""]),
+  ].join("\n");
+  return waLink(message);
+};
 export const GENERAL_MSG = "Hello Manyaleza Suppliers, I would like to make an enquiry.";
 export const AUTO_MSG = "Hello Manyaleza Suppliers, I would like to enquire about your vehicle services.";
 
