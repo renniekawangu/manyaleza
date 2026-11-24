@@ -111,7 +111,7 @@ export function ProductCard({ p, catName, onOpen }) {
         <Img src={p.image} alt={p.name} ratio="aspect-[4/3]" />
         <div className="flex-1 p-5 pb-4"><p className="text-xs font-medium text-accent">{catName}</p><h3 className="mt-1 text-lg font-semibold leading-snug">{p.name}</h3><p className="mt-1.5 text-sm text-charcoal/70">{p.desc}</p></div>
       </button>
-      <div className="px-5 pb-5"><Btn variant="dark" href={productEnquiry(p.name)}>Enquire on WhatsApp</Btn></div>
+      <div className="px-5 pb-5"><Btn variant="dark" href={productEnquiry(p)}>Enquire on WhatsApp</Btn></div>
     </article>
   );
 }
@@ -147,7 +147,7 @@ export function ProductDetailModal({ p, catName, onClose }) {
           <h3 id="pm-title" className="mt-1 text-2xl font-semibold">{p.name}</h3>
           <p className="mt-3 text-charcoal/75">{p.desc}</p>
           <p className="mt-3 text-sm text-charcoal/55">Price and availability on enquiry.</p>
-          <div className="mt-6"><Btn href={productEnquiry(p.name)}>Enquire on WhatsApp</Btn></div>
+          <div className="mt-6"><Btn href={productEnquiry(p)}>Enquire on WhatsApp</Btn></div>
         </div>
       </div>
     </div>

@@ -27,7 +27,7 @@ export const stock = (kw, n, w = 800, h = 600) => {
   return map[kw] ?? localAsset("front_view_car.jpeg");
 };
 
-export const LAPTOP_IMG = localAsset("calculator.jpg");
+export const LAPTOP_IMG = localAsset("laptop.webp");
 export const IMG = {
   hero: localAsset("hero_car.jpeg"),
   autoDivision: localAsset("front_view_car.jpeg"),
@@ -45,7 +45,11 @@ export const BUSINESS = {
 };
 
 export const waLink = (text) => `https://wa.me/${BUSINESS.wa}?text=${encodeURIComponent(text)}`;
-export const productEnquiry = (n) => waLink(`Hello Manyaleza Suppliers, I would like to enquire about ${n}. Please share the current price and availability.`);
+export const productUrl = (p) => {
+  if (typeof window === "undefined") return `#/supplies?product=${encodeURIComponent(p.id)}`;
+  return `${window.location.origin}${window.location.pathname}${window.location.search}#/supplies?product=${encodeURIComponent(p.id)}`;
+};
+export const productEnquiry = (p) => waLink(`Hello Manyaleza Suppliers, I would like to enquire about ${p.name}. Please share the current price and availability. Product link: ${productUrl(p)}`);
 export const GENERAL_MSG = "Hello Manyaleza Suppliers, I would like to make an enquiry.";
 export const AUTO_MSG = "Hello Manyaleza Suppliers, I would like to enquire about your vehicle services.";
 
